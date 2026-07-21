@@ -40,11 +40,19 @@
 ## 项目文件结构
 
 ```
-xhs-growth-analytics/
+media-growth-analytics/
 ├── README.md                    # 本文件
 ├── prompt_log.md                # 与 Claude Code 的完整协作记录
+├── charts.py                    # 一键生成 4 张核心图表
+├── run_all.py                   # 一键运行全部分析 Pipeline
+├── charts/                      # 可视化图表（PNG）
+│   ├── 01_genre_comparison.png          # 视频 vs 图文 IR 对比
+│   ├── 02_title_length.png              # 标题字数倒 U 型曲线
+│   ├── 03_vertical_label_stratified.png # 标签 × 体裁分层分析
+│   └── 04_publish_time.png              # 发布时间段效果
 ├── data/
-│   └── notes_raw.xlsx           # 原始数据（44篇 × 13指标）
+│   ├── notes_raw.xlsx           # 原始数据（44篇 × 13指标）
+│   └── notes_raw.csv
 ├── src/
 │   ├── 01_basic_stats.py        # Phase 1: 体裁对比 + TOP10 排名
 │   ├── 02_top10_comparison.py   # Phase 2: TOP10 vs 倒数10 逐维对比
